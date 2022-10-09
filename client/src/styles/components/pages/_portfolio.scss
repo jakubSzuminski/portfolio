@@ -1,0 +1,16 @@
+main.portfolio {
+    padding-top: 8rem;
+}
+
+@media screen and (max-width: 62.5em) {
+    main.portfolio {
+        width: 80%;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width: 46.875em) {
+    main.portfolio {
+        padding-top: 6rem;
+    }
+}

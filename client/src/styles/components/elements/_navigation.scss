@@ -1,0 +1,109 @@
+nav {
+    width: 100%;
+    
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    
+    background-color: #819CAD00;
+    backdrop-filter: blur(2px);
+
+    div#mobile {
+        display: none;
+    }
+
+    ul {   
+        padding: 1rem 6rem;
+        list-style: none;
+
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+      
+        font-family: 'Source Code Pro';
+
+        li {
+            display: flex;
+            justify-content: center;
+        }
+
+        a {
+            transition: all 0.25s;
+            
+            &:link, &:visited {
+                text-decoration: none;
+                font-size: 1.9rem;
+
+                padding: 1rem 1rem;
+                border-radius: 6px;
+                
+                &.active {
+                    font-weight: 700;
+                }
+            }
+
+            &:hover, &:active {
+                color: $gray;
+            }
+        }
+    }
+
+    &.hide {
+        display: none;
+    }
+}
+
+@keyframes hide {
+    from { transform: translateY(0); }
+    to { transform: translateY(83%); }
+}
+
+@media screen and (max-width: 46.785em) {
+    nav {
+        backdrop-filter: blur(5px);
+        transform: translateY(83%);
+
+        div#mobile {
+            display: block;
+            transition: all 0.35s;
+            padding: 1rem 1rem;
+            background-color: #8C5BEA25;
+
+            button {
+                display: block;
+                margin: 0 auto;
+                padding: 1rem 1rem;
+                font-family: 'Source Code Pro';
+                font-size: 1.9rem;
+                background-color: transparent;
+                color: $white;
+                outline: none;
+                border: none;
+            }
+        }
+        
+        ul {
+            transition: all 0.35s;
+            flex-direction: column;
+            background-color: #8C5BEA25;
+            opacity: 0;
+        }
+    }
+
+    nav.mobile-active {
+        transform: translateY(0);
+        backdrop-filter: blur(10px);
+        transition: all 0.35s;
+
+        div#mobile {
+            background-color: #CE83C835;
+        }
+        ul {
+            opacity: 1;
+        }
+    }
+
+    nav.mobile-inactive {
+        animation: hide 350ms ease-in-out;
+    }
+}

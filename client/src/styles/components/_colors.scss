@@ -1,0 +1,27 @@
+$black: #121212;
+$pink: #CE83C8;
+$pink-dark: #8C5BEA;
+$gray: #819CAD;
+$white: #FFFFFF;
+
+@mixin text-gradient-1 {
+    background: rgb(140,91,234);
+    background: linear-gradient(356deg, rgba(140,91,234,1) 0%, rgba(206,131,200,1) 100%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+@mixin text-gradient {
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+@mixin gradient-green {
+    background: rgb(10,69,69);
+    background: linear-gradient(40deg, rgba(10,69,69,0.85) 0%, rgba(148,245,140,0.65) 100%);
+}
+
+@mixin gradient-red {
+    background: rgb(240,100,69);
+    background: linear-gradient(209deg, rgba(240,100,69,1) 0%, rgba(200,73,73,1) 100%);
+}

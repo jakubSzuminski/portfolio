@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Source+Code+Pro&display=swap');
+@import './components/resets';
+@import './components/colors';
+
+@import './components/animations';
+@import './components/loading';
+
+@import './components/elements/navigation';
+@import './components/elements/project';
+@import './components/elements/header';
+
+@import './components/pages/welcome';
+@import './components/pages/portfolio';
+@import './components/pages/skills';
+@import './components/pages/contact';
+@import './components/pages/blog';
+
+body {
+    background-color: $black;
+    color: $white;
+    font-family: 'Inter';
+    overflow-x: hidden;
+
+    position: relative;
+    padding-bottom: 15rem;
+}
+
+a:link, a:visited { 
+    color: $white;
+}

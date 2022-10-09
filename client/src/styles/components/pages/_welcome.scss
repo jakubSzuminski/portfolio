@@ -1,0 +1,104 @@
+header.welcome {
+    padding-top: 10rem;
+    
+    h1 { 
+        display: block; 
+        font-size: 6rem;
+        color: $pink-dark;
+    }
+
+    h2 {
+        display: block;
+        font-size: 3rem;
+        font-weight: 400;
+        letter-spacing: 0.5px;
+        margin-bottom: 2rem;
+    }
+
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+main.welcome {
+    padding-top: 20rem;
+
+    div {
+        position: relative;
+        display: flex;
+        justify-content: center;
+    }
+
+    .blob {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+
+        transform: translate(-50%, -50%);
+        z-index: 1;
+    }
+
+    #blob-1 {
+        width: 40rem;
+        height: 20rem;
+    }
+
+    #blob-2 {
+        width: 42rem;
+        height: 23rem;
+    }
+
+    button {
+        display: block;
+        font-size: 2rem;
+        font-family: inherit;
+        outline: none;
+        border: none;
+
+        background-color: rgba(255, 255, 255, 0.1);
+        color: $white;
+
+        padding: 1rem 2rem;
+        border-radius: 1rem;
+        z-index: 2;
+
+        transition: all 0.35s;
+        &:hover, &:active {
+            background-color: rgba(255, 255, 255, 0.25);
+            cursor: pointer;
+        }
+    }
+}
+
+@media screen and (max-width: 32em) {
+    header.welcome {
+        h1 { font-size: 4.7rem; }
+        h2 { font-size: 2.5rem; margin-bottom: 1.7rem; }
+    }
+
+    main.welcome {
+        #blob-1 {
+            width: 25rem;
+            height: 18rem;
+        }
+
+        #blob-2 {
+            width: 28rem;
+            height: 20rem;
+        }
+    }
+}
+
+@media screen and (max-width: 28em) {
+    header.welcome {
+        h1 { font-size: 4.6rem;}
+        h2 { font-size: 2.3rem; margin-bottom: 1.5rem; }
+    }
+}
+
+@media screen and (max-width: 22em) {
+    header.welcome {
+        h1 { font-size: 2rem; font-size: 15vw; }
+        h2 { font-size: 1.8rem; font-size: 8vw; margin-bottom: 1rem; }
+    }
+}

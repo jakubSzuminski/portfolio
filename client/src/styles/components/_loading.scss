@@ -1,0 +1,33 @@
+div.loading-container {
+    font-family: 'Source Code Pro';
+    text-align: center;
+
+    position: fixed;
+    left: 50%;
+    top: 45%;
+    transform: translate(-50%, -50%);
+    
+    h1 {
+        font-size: 4rem;
+        margin-bottom: 2rem;
+    }
+
+    p {
+        font-size: 2rem;
+        color: $gray;
+    }
+}
+
+@media screen and (max-width: 32em) {
+    div.loading-container {
+        width: 80%;
+        h1 { font-size: 3rem; }
+    }
+}
+
+@media screen and (max-width: 19em) {
+    div.loading-container {
+        h1 { font-size: 2.5rem; }
+        p { font-size: 1.8rem; }
+    }
+}
